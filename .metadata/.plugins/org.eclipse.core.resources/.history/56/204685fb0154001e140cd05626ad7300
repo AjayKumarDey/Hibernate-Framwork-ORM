@@ -1,0 +1,28 @@
+package com.firstproject;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class load_methods {
+public static void main(String[] args) {
+	System.out.println("project startedd....");
+	
+	Configuration cfg=new Configuration();
+	cfg.configure();
+	SessionFactory factory = cfg.buildSessionFactory();
+	
+	
+	//LOAD METHODSS..
+	Session openSession = factory.openSession();
+	
+	
+	Student student = openSession.load(Student.class, 3);
+	
+	openSession.close();
+	factory.close();
+	
+	
+	
+}
+}

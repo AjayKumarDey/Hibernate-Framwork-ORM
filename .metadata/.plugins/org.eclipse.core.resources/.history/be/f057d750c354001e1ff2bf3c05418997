@@ -1,0 +1,30 @@
+package oneToMany;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class Main {
+public static void main(String[] args) {
+	 Configuration cfg=new Configuration();
+     cfg.configure();
+      SessionFactory factory=cfg.buildSessionFactory();
+      
+      Question q=new Question();
+      q.setQuestionid(12);
+      q.setQuestion("what is java ");
+      Answer a=new Answer();
+      a.setAnswerid(1);
+      a.setAnswer("java is a programming language");
+      a.set
+      
+      
+      List<Answer> list=new ArrayList();
+      list.add("");
+      q.setAnswers(null);
+      
+      
+}
+}

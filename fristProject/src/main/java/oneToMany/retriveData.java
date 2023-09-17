@@ -1,0 +1,28 @@
+package oneToMany;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+public class retriveData {
+public static void main(String[] args) {
+	System.out.println("project started...");
+	 Configuration cfg=new Configuration();
+     cfg.configure("hibernate.cfg.xml");
+      SessionFactory factory=cfg.buildSessionFactory();
+      
+      Session openSession = factory.openSession();
+      
+      Question question = openSession.get(Question.class, 154);
+      System.out.println(question.getQuestion());
+      for(Answer a:question.getAnswers())
+      {
+    	  System.out.println(a.getAnswer());
+      }
+      
+      
+      openSession.close();
+      factory.close();
+      
+}
+}

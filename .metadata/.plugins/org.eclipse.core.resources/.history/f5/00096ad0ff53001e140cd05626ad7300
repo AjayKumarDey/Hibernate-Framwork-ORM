@@ -1,0 +1,42 @@
+package com.firstproject;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+       Configuration cfg=new Configuration();
+       cfg.configure();
+        SessionFactory factory=cfg.buildSessionFactory();
+        
+        Student st=new Student();
+        st.setSid(3);
+        st.setSname("abhimanyu");
+        st.setSalary(26634);
+        System.out.println(st);
+        
+        Session openSession = factory.openSession();
+        
+        Transaction tx = openSession.beginTransaction();
+        
+        openSession.save(st);
+        tx.commit();
+        openSession.close();
+        
+      
+        
+        
+       
+        
+     
+    }
+}

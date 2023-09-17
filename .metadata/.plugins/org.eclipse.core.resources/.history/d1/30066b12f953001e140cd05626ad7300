@@ -1,0 +1,21 @@
+package com.firstproject;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        Student s=new Student();
+        s.setSid(1);
+        s.setSname("Ajay");
+        s.setSalary(23645);
+        
+        System.out.println(s);
+        
+        
+    }
+}

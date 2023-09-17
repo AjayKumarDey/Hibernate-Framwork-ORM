@@ -1,0 +1,27 @@
+package com.oneToOne;
+
+public class Question {
+
+	private int questionid;
+	private String question;
+	private Answer answer;
+	public int getQuestionid() {
+		return questionid;
+	}
+	public void setQuestionid(int questionid) {
+		this.questionid = questionid;
+	}
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	public Answer getAnswer() {
+		return answer;
+	}
+	public void setAnswer(Answer answer) {
+		this.answer = answer;
+	}
+	
+}

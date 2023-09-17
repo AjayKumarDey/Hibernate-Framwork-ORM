@@ -1,0 +1,30 @@
+package embeddObject;
+
+import com.firstproject.Name;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Children {
+	@Id
+	private long mobileno;
+	private Name name;
+	public long getMobileno() {
+		return mobileno;
+	}
+	public void setMobileno(long mobileno) {
+		this.mobileno = mobileno;
+	}
+	public Name getName() {
+		return name;
+	}
+	public void setName(Name name) {
+		this.name = name;
+	}
+	@Override
+	public String toString() {
+		return mobileno+" "+name;
+	}
+	
+}
